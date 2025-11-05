@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import AnimatedCursor from "react-animated-cursor";
 export const metadata: Metadata = {
   title: "Safelynk",
   description:
@@ -24,22 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={35}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={0}
-          innerStyle={{
-            backgroundColor: "#183222",
-          }}
-          outerStyle={{
-            border: "3px solid #D3FC64",
-          }}
-        />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

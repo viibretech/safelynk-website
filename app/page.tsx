@@ -326,7 +326,9 @@ export default function Index() {
             </span>
             <span className="text-xs max-w-xs">
               <span>Can’t find what you’re looking for? Reach out to</span>{" "}
-              <a className="underline">support@safelynk.io</a>
+              <a href="mailto:hello@safelynk.io" className="underline">
+                support@safelynk.io
+              </a>
             </span>
           </div>
           <div className="mt-6 sm:mt-0 w-full">
@@ -341,6 +343,7 @@ export default function Index() {
                       title: "text-[17px]",
                       base: "text-xs text-divider-600 font-inter-regular",
                       indicator: "text-black",
+                      titleWrapper: "cursor-pointer",
                     }}
                   >
                     {item.description}

@@ -39,7 +39,7 @@ const Header = ({ mainPage = false }: { mainPage?: boolean }) => {
       className={`flex justify-between transition-all duration-300 py-7 w-full items-center bg-transparent z-50 translate-y-0`}
     >
       <div className="flex items-center space-x-24">
-        <div onClick={() => router.push("/")}>
+        <div onClick={() => router.push("/")} className="cursor-pointer">
           <Image
             alt="viibre.png"
             src={
