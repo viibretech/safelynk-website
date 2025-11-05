@@ -2,6 +2,7 @@
 @plugin '../hero.ts';
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
+@plugin 'tailwind-scrollbar';
 
 /* :root {
   --background: #ffffff;
@@ -18,6 +19,11 @@
 @font-face {
   font-family: InterDisplayMedium;
   src: url("../public/fonts/InterDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: InterDisplayBold;
+  src: url("../public/fonts/InterDisplay-Bold.ttf");
 }
 
 @font-face {
@@ -50,21 +56,76 @@
   src: url("../public/fonts/InstrumentSerif-Regular.ttf");
 }
 
+@font-face {
+  font-family: InstrumentSerifItalic;
+  src: url("../public/fonts/InstrumentSerif-Italic.ttf");
+}
+
 @theme {
   --font-inter-display-medium: InterDisplayMedium;
   --font-instrument-regular: InstrumentSerifRegular;
+  --font-instrument-italic: InstrumentSerifItalic;
   --font-inter-regular: InterRegular;
   --font-inter-bold: InterBold;
   --font-inter-light: InterLight;
   --font-inter-thin: InterThin;
   --font-inter-medium: InterMedium;
+  --font-inter-display-bold: InterDisplayBold;
   --text-xs: 14px;
 }
 
+/* In your CSS file */
+@layer base {
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply rounded-none bg-auto;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#183222] rounded-none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* 
-  color: var(--foreground);
-  */
-  background: #121212;
   font-family: InterRegular;
+}
+
+.embla {
+  max-width: 48rem;
+  margin: auto;
+  /* --slide-height: 15rem; */
+  --slide-spacing: 0.8rem;
+  --slide-size: 70%;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 2rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
 }

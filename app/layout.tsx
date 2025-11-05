@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
+import AnimatedCursor from "react-animated-cursor";
 export const metadata: Metadata = {
-  title: "Viibre Technologies",
+  title: "Safelynk",
   description:
-    "A technology company focused on building innovative digital solutions and providing technical services to individuals and businesses. We specialize in creating secure, user-friendly platforms that solve everyday challenges and enhance digital interactions across various industries.",
+    "Safelynk is a secure escrow and payment protection platform that ensures trust between buyers and sellers. Funds are held safely until both parties fulfill their obligations — enabling safer trades, service payments, and peer-to-peer transactions across Ghana and beyond.",
 };
 
 export default function RootLayout({
@@ -25,9 +14,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          innerStyle={{
+            backgroundColor: "#183222",
+          }}
+          outerStyle={{
+            border: "3px solid #D3FC64",
+          }}
+        />
         {children}
       </body>
     </html>
