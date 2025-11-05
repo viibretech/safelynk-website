@@ -30,7 +30,9 @@ export const SolutionCard = ({
           src={imagePath}
           alt="card-image"
           className={`w-full ${
-            window && window?.innerWidth <= 767 ? "w-screen" : ""
+            typeof window !== "undefined" && window.innerWidth <= 767
+              ? "w-screen"
+              : ""
           } h-[320px] object-cover rounded-2xl`}
         />
         <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/20 to-transparent z-10 rounded-2xl">
