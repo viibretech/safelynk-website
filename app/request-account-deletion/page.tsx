@@ -16,11 +16,12 @@ const Page = () => {
       <div className="z-20 px-5 lg:px-40">
         <div className="flex flex-col items-center mt-10 mb-10 md:space-y-1">
           <h1 className="text-2xl transition-all md:text-4xl font-inter-display-bold text-center mb-6">
-            Get in touch
+            {"We're sorry to see you leave"}
           </h1>
           <h1 className="text-xs transition-all text-center">
-            Have questions or need a demo? Send us a message and we’ll reply
-            promptly.
+            {
+              "Please provide your details below to request account deletion. If there's anything we can do to improve your experience, let us know."
+            }
           </h1>
         </div>
 
@@ -29,26 +30,17 @@ const Page = () => {
             <CardBody className="p-10 px-5 md:px-10 w-full">
               <Form
                 className="space-y-5"
-                onSubmit={async () => {
+                onSubmit={async (e) => {
+                  e.preventDefault();
                   if (!isHuman) return;
                 }}
               >
                 <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-x-10 gap-y-5 w-full">
-                  <GeneralInputComponent
-                    label="Full Name"
-                    isRequired
-                    name="name"
-                  />
+                  <GeneralInputComponent label="Full Name" name="name" />
                   <EmailInputComponent />
                 </div>
-                <GeneralInputComponent
-                  label="Subject"
-                  isRequired
-                  name="subject"
-                />
                 <Textarea
-                  placeholder="Write your message"
-                  isRequired
+                  placeholder="Reason for account deletion"
                   variant="underlined"
                   name="message"
                   classNames={{
@@ -74,7 +66,7 @@ const Page = () => {
                   size="sm"
                   type="submit"
                 >
-                  Send message
+                  Request
                 </Button>
               </Form>
             </CardBody>
