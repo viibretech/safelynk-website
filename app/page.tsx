@@ -2,19 +2,13 @@
 
 import Card from "@/components/card";
 import CarouselComponent from "@/components/carousel";
-import Header, { NavLink } from "@/components/header";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import SocialButton from "@/components/social-button";
 import { SolutionCard } from "@/components/solution-card";
 import { useDeviceType } from "@/hooks/device-type-hook";
-import { faqs, socials, useCases } from "@/utils/contents";
-import {
-  Accordion,
-  AccordionItem,
-  Avatar,
-  Button,
-  Divider,
-  Image,
-} from "@heroui/react";
+import { faqs, useCases } from "@/utils/contents";
+import { Accordion, AccordionItem, Avatar, Button, Image } from "@heroui/react";
 import { useState } from "react";
 
 export default function Index() {
@@ -49,11 +43,11 @@ export default function Index() {
           <div className="absolute inset-0 w-full h-full bg-linear-to-r from-black/90 via-black/20 to-transparent z-10" />
         </div>
         {/* Content with padding */}
-        <div className="relative z-20 px-5 lg:px-40">
+        <div className="relative z-20">
           {/* Your content here */}
           <div className="flex flex-col sm:h-screen h-[80vh]">
             <Header mainPage />
-            <div className="h-full flex flex-col justify-center">
+            <div className="h-full flex flex-col justify-center lg:px-40 px-5">
               <div className="max-w-md space-y-3">
                 <span className="text-2xl transition-all md:text-5xl font-inter-display-bold">
                   Rebuilding Trust in <br /> Digital Trade
@@ -353,70 +347,8 @@ export default function Index() {
             </Accordion>
           </div>
         </div>
-        <div className="mt-20">
-          <div className="space-y-5">
-            <Divider />
-            <div className="flex flex-col sm:flex-row sm:justify-between">
-              <div className="flex items-start sm:items-center flex-col sm:flex-row space-x-3">
-                <Image
-                  alt="viibre.png"
-                  src={"/images/safelynk-icon.png"}
-                  width={30}
-                  radius="none"
-                />
-                <nav className="space-x-3 text-black mt-2 sm:mt-0">
-                  <NavLink color="black" href="#home">
-                    Home
-                  </NavLink>
-                  <NavLink color="black" href="#security">
-                    Security
-                  </NavLink>
-                  <NavLink color="black" href="#how-it-works">
-                    How It Works
-                  </NavLink>
-                  <NavLink color="black" href="#use-cases">
-                    Use Cases
-                  </NavLink>
-                  <NavLink color="black" href="#faqs">
-                    FAQs
-                  </NavLink>
-                </nav>
-              </div>
-
-              <div className="flex items-center space-x-3  mt-6 sm:mt-0">
-                {socials.map((item, i) => {
-                  return (
-                    <a
-                      key={i}
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        alt={item.name}
-                        src={item.image}
-                        width={20}
-                        radius="none"
-                      />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-            <nav className="space-x-3 text-black">
-              <NavLink color="black" href="/terms-of-service">
-                Terms of Service
-              </NavLink>
-              <NavLink color="black" href="/privacy">
-                Privacy Policy
-              </NavLink>
-              {/* <NavLink color="black" href="">
-                Our Escrow Promise
-              </NavLink> */}
-            </nav>
-          </div>
-        </div>
       </section>
+      <Footer />
     </div>
   );
 }

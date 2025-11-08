@@ -9,6 +9,13 @@ type Props = {
   placeholder?: string;
   isReadOnly?: boolean;
   endContent?: React.ReactNode;
+  variant?: "flat" | "bordered" | "faded" | "underlined" | undefined;
+  labelPlacement?:
+    | "inside"
+    | "outside"
+    | "outside-left"
+    | "outside-top"
+    | undefined;
 };
 
 function EmailInputComponent({
@@ -18,6 +25,8 @@ function EmailInputComponent({
   isReadOnly,
   placeholder,
   border,
+  variant = "underlined",
+  labelPlacement = "inside",
 }: Props) {
   return (
     <div className="relative w-full">
@@ -27,9 +36,9 @@ function EmailInputComponent({
         isReadOnly={isReadOnly}
         defaultValue={defaultValue}
         // startContent={<RiMailLine className="text-divider-500 w-4 h-4" />}
-        labelPlacement="inside"
+        labelPlacement={labelPlacement}
         placeholder={placeholder}
-        variant="underlined"
+        variant={variant}
         name="email"
         type="email"
         size="sm"

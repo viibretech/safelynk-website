@@ -80,6 +80,9 @@ export default function AppDrawer({
                   <div onClick={onClose}>
                     <NavLink href="/#faqs">FAQs</NavLink>
                   </div>
+                  <div onClick={onClose}>
+                    <NavLink href="/contact-us">Contact</NavLink>
+                  </div>
                 </nav>
               </DrawerBody>
             </>

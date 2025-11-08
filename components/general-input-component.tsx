@@ -11,6 +11,13 @@ type Props = {
   endContent?: React.ReactNode;
   defaultValue?: string;
   className?: string;
+  variant?: "flat" | "bordered" | "faded" | "underlined" | undefined;
+  labelPlacement?:
+    | "inside"
+    | "outside"
+    | "outside-left"
+    | "outside-top"
+    | undefined;
 };
 
 function GeneralInputComponent({
@@ -23,6 +30,8 @@ function GeneralInputComponent({
   isReadOnly,
   endContent,
   defaultValue,
+  variant = "underlined",
+  labelPlacement = "inside",
 }: Props) {
   return (
     <Input
@@ -30,10 +39,10 @@ function GeneralInputComponent({
       isReadOnly={isReadOnly}
       isRequired={isRequired}
       startContent={startContent}
-      labelPlacement="inside"
+      labelPlacement={labelPlacement}
       defaultValue={defaultValue}
       placeholder={placeholder}
-      variant="underlined"
+      variant={variant}
       name={name}
       endContent={endContent}
       type="text"

@@ -36,7 +36,7 @@ const Header = ({ mainPage = false }: { mainPage?: boolean }) => {
 
   return (
     <div
-      className={`flex justify-between transition-all duration-300 py-7 w-full items-center bg-transparent z-50 translate-y-0`}
+      className={`flex justify-between transition-all duration-300 py-7 w-full items-center bg-transparent z-50 translate-y-0 lg:px-40 px-5`}
     >
       <div className="flex items-center space-x-24">
         <div onClick={() => router.push("/")} className="cursor-pointer">
@@ -84,6 +84,12 @@ const Header = ({ mainPage = false }: { mainPage?: boolean }) => {
                 href={mainPage ? `#faqs` : "/#faqs"}
               >
                 FAQs
+              </NavLink>
+              <NavLink
+                color={mainPage ? "white" : "black"}
+                href={`/contact-us`}
+              >
+                Contact
               </NavLink>
             </nav>
           </div>

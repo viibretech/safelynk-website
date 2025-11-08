@@ -1,72 +1,74 @@
-import { RiArrowLeftSLine, RiFileCopyLine } from "@remixicon/react";
+import { socials } from "@/utils/contents";
 import { NavLink } from "./header";
-import EmailInputComponent from "./email-input-component";
-import { Button, Image } from "@heroui/react";
+import { Divider, Image } from "@heroui/react";
 
 const Footer = () => {
   return (
-    <div className="relative">
-      <div className="text-white bg-[#1D1D1D] space-y-10 lg:space-y-0 items-start py-20 lg:py-32 pb-32 lg:pb-60 lg:space-x-10 px-5 lg:px-40 flex flex-col lg:flex-row lg:justify-between lg:items-center">
-        <div className="space-y-4">
-          <Image
-            alt="viibre.png"
-            src={"/images/viibre-icon.png"}
-            className="w-24 lg:w-48"
-          />
-          <div className="flex space-x-0 items-center">
-            <span>hello@viibre.io</span>
-            <Button
-              isIconOnly
-              size="sm"
-              variant="light"
-              className="rounded-full -scale-60 md:-scale-75"
-              startContent={
-                <RiFileCopyLine
-                  className="cursor-pointer text-white"
-                  size={22}
-                />
-              }
-            />
-          </div>
-          <span className="text-slate-400">
-            © 2025 Viibre Technology Limited
-          </span>
-        </div>
-        <div className="flex flex-col">
-          <span className="text-4xl md:text-6xl font-instrument-regular mb-2">
-            Stay connected
-          </span>
-          <span className="sm:max-w-md text-xs text-slate-400">
-            Join our newsletter and stay updated on the latest trends in digital
-            design
-          </span>
-          <br />
-          <EmailInputComponent
-            border="border-0 border-b-1 border-b-white"
-            endContent={
-              <Button
-                isIconOnly
-                size="sm"
-                className="rounded-full -scale-60 md:-scale-75 bg-[#2E9AEE]"
-                startContent={<RiArrowLeftSLine size={20} />}
+    <section id="footer" className="bg-white px-5 lg:px-40 pt-20 pb-10">
+      <div className="">
+        <div className="space-y-3">
+          <Divider />
+          <div className="flex flex-col sm:flex-row sm:justify-between">
+            <div className="flex items-start sm:items-center flex-col sm:flex-row space-x-3">
+              <Image
+                alt="viibre.png"
+                src={"/images/safelynk-icon.png"}
+                width={30}
+                radius="none"
               />
-            }
-          />
+              <nav className="space-x-3 text-black mt-2 sm:mt-0">
+                <NavLink color="black" href="#home">
+                  Home
+                </NavLink>
+                <NavLink color="black" href="#security">
+                  Security
+                </NavLink>
+                <NavLink color="black" href="#how-it-works">
+                  How It Works
+                </NavLink>
+                <NavLink color="black" href="#use-cases">
+                  Use Cases
+                </NavLink>
+                <NavLink color="black" href="#faqs">
+                  FAQs
+                </NavLink>
+              </nav>
+            </div>
+
+            <div className="flex items-center space-x-3  mt-6 sm:mt-0">
+              {socials.map((item, i) => {
+                return (
+                  <a
+                    key={i}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      alt={item.name}
+                      src={item.image}
+                      width={20}
+                      radius="none"
+                    />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+          <nav className="space-x-3 text-black">
+            <NavLink color="black" href="/terms-of-service">
+              Terms of Service
+            </NavLink>
+            <NavLink color="black" href="/privacy">
+              Privacy Policy
+            </NavLink>
+            {/* <NavLink color="black" href="">
+                Our Escrow Promise
+              </NavLink> */}
+          </nav>
         </div>
-        <nav className="flex flex-col space-y-3">
-          <span className="sm:max-w-md text-xs text-slate-400">
-            Quick Links
-          </span>
-          <NavLink href="/home">Home</NavLink>
-          <NavLink href="">About</NavLink>
-          <NavLink href="">Services</NavLink>
-          <NavLink href="">Contact</NavLink>
-        </nav>
       </div>
-      <div className="w-full bottom-0 px-10 sm:px-0 right-0 left-0 absolute flex justify-center">
-        <Image alt="viibre.png" src={"/images/viibre.png"} className="w-md" />
-      </div>
-    </div>
+    </section>
   );
 };
 
