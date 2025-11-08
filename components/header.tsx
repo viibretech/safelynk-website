@@ -106,6 +106,7 @@ const Header = ({ mainPage = false }: { mainPage?: boolean }) => {
             className={`border-1 z-10 relative bg-transparent ${
               mainPage ? "border-white" : "border-black"
             } px-2.5`}
+            onPress={() => router.push("/#download")}
           >
             <div
               className={`flex items-center space-x-2 relative z-10 ${

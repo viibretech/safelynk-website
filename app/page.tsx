@@ -108,7 +108,7 @@ export default function Index() {
             <div className="flex flex-col items-start space-y-3 max-w-xs">
               <Avatar
                 showFallback
-                className="bg-divider-300 h-12 w-12"
+                className="bg-[#EDEFEC] h-12 w-12"
                 fallback={
                   <Image
                     src="svgs/key.svg"
@@ -118,7 +118,7 @@ export default function Index() {
                   />
                 }
               />
-              <span className="text-divider-600 text-xs">
+              <span className="text-divider-600 tracking-[-1.1] text-xs">
                 We securely lock the payment until both sides confirm the deal.
               </span>
             </div>
@@ -126,7 +126,7 @@ export default function Index() {
             <div className="flex flex-col items-start space-y-3 max-w-xs">
               <Avatar
                 showFallback
-                className="bg-divider-300  h-12 w-12"
+                className="bg-[#EDEFEC]  h-12 w-12"
                 fallback={
                   <Image
                     src="svgs/lock.svg"
@@ -136,7 +136,7 @@ export default function Index() {
                   />
                 }
               />
-              <span className="text-divider-600 text-xs">
+              <span className="text-divider-600 tracking-[-1.1] text-xs">
                 Your account is protected with 2-factor authentication.
               </span>
             </div>
@@ -144,7 +144,7 @@ export default function Index() {
             <div className="flex flex-col items-start space-y-3 max-w-xs">
               <Avatar
                 showFallback
-                className="bg-divider-300  h-12 w-12"
+                className="bg-[#EDEFEC]  h-12 w-12"
                 fallback={
                   <Image
                     src="svgs/shield.svg"
@@ -154,7 +154,7 @@ export default function Index() {
                   />
                 }
               />
-              <span className="text-divider-600 text-xs">
+              <span className="text-divider-600 tracking-[-1.1] text-xs">
                 Funds are safely stored in escrow through trusted financial
                 partners.
               </span>
@@ -168,7 +168,7 @@ export default function Index() {
             <span className="text-2xl transition-all md:text-4xl font-inter-display-bold">
               How it works
             </span>
-            <div className="sm:max-w-md text-xs mt-3 text-divider-600 text-center">
+            <div className="sm:max-w-md text-xs mt-3 tracking-[-1.1] text-divider-600 text-center">
               Safelynk uses escrow to protect both parties. The buyer’s funds
               are securely stored and released only after delivery or service
               confirmation.
@@ -264,7 +264,7 @@ export default function Index() {
           )}
         </div>
       </section>
-      <div className="relative w-full">
+      <section id="download" className="relative w-full">
         <Image
           src="images/rough-bg.jpg"
           alt="rough-bg.jpg"
@@ -298,7 +298,7 @@ export default function Index() {
                   text2="App Store"
                 />
                 <SocialButton
-                  imagePath="svgs/apple.svg"
+                  imagePath="svgs/google.svg"
                   text1="GET IT ON"
                   text2="Google Pay"
                 />
@@ -306,7 +306,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <section id="faqs" className="bg-white px-5 lg:px-40 py-20">
         <div className="flex flex-col items-start sm:grid sm:grid-rows-1 sm:grid-cols-2">
           <div className="flex flex-col space-y-3 items-start">

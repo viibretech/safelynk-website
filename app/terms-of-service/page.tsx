@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Chip } from "@heroui/react";
 
 const Page = () => {
   return (
@@ -10,8 +11,12 @@ const Page = () => {
 
         {/* Main Content Area */}
         <div className="flex flex-col items-center mt-10 mb-10">
+          <div className="items-center mb-2">
+            {/* day/month/year */}
+            <Chip className="bg-[#C2F5DA]">UPDATED 08/11/2025</Chip>
+          </div>
           <h1 className="text-2xl transition-all md:text-4xl font-inter-display-bold text-center mb-6">
-            SAFELYNK TERMS OF SERVICE
+            Terms of Service
           </h1>
         </div>
 
@@ -20,7 +25,7 @@ const Page = () => {
           {/* Terms of Service Introduction */}
           <section className="space-y-4">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
-              Terms of Service
+              Introduction
             </h2>
             <p>
               This Website Terms of Use (the “Agreement”) governs the terms and

@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Chip } from "@heroui/react";
 
 const Page = () => {
   return (
@@ -10,8 +11,12 @@ const Page = () => {
 
         {/* Main Content Area */}
         <div className="flex flex-col items-center mt-10 mb-10">
+          <div className="items-center mb-2">
+            {/* day/month/year */}
+            <Chip className="bg-[#C2F5DA]">UPDATED 08/11/2025</Chip>
+          </div>
           <h1 className="text-2xl transition-all md:text-4xl font-inter-display-bold text-center mb-6">
-            SAFELYNK PRIVACY STATEMENT
+            Privacy Policy
           </h1>
         </div>
 

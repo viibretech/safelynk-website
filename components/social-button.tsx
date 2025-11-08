@@ -15,6 +15,7 @@ const SocialButton = (payload: {
           src={payload.imagePath}
           alt="apple-logo"
           className="h-[25px] w-[25px]"
+          radius="none"
         />
         <div className="flex flex-col items-start -translate-y-1">
           <span className="text-[9px] translate-y-2">{payload.text1}</span>
