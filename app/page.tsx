@@ -10,6 +10,7 @@ import { useDeviceType } from "@/hooks/device-type-hook";
 import { faqs, useCases } from "@/utils/contents";
 import { Accordion, AccordionItem, Avatar, Button, Image } from "@heroui/react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Index() {
   const [flipped, setFlipped] = useState<boolean[]>([
@@ -24,6 +25,8 @@ export default function Index() {
   };
 
   const { isMobile, isDesktop } = useDeviceType();
+
+  const router = useRouter();
 
   return (
     <div>
@@ -61,6 +64,7 @@ export default function Index() {
                   radius="full"
                   className="w-28 bg-white h-[40px] mt-3"
                   size="sm"
+                  onPress={() => router.push("/#download")}
                 >
                   Get Started
                 </Button>

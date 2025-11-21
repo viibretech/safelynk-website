@@ -60,6 +60,7 @@ const Page = () => {
                 <ReCAPTCHA
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
                   onChange={(token) => {
+                    console.log(token);
                     if (token) {
                       setIsHuman(true);
                     } else {

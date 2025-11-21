@@ -3,36 +3,36 @@ import { useDeviceType } from "@/hooks/device-type-hook";
 import { Button } from "@heroui/react";
 import { RiAndroidLine, RiAppStoreLine } from "@remixicon/react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import AppDrawer from "./drawer";
 import { useRouter } from "next/navigation";
 
 const Header = ({ mainPage = false }: { mainPage?: boolean }) => {
   const { isDesktop } = useDeviceType();
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  // const [isVisible, setIsVisible] = useState(true);
+  // const [lastScrollY, setLastScrollY] = useState(0);
 
   const router = useRouter();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
 
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down & past 100px
-        setIsVisible(false);
-      }
+  //     if (currentScrollY < lastScrollY) {
+  //       // Scrolling up
+  //       setIsVisible(true);
+  //     } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+  //       // Scrolling down & past 100px
+  //       setIsVisible(false);
+  //     }
 
-      setLastScrollY(currentScrollY);
-    };
+  //     setLastScrollY(currentScrollY);
+  //   };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [lastScrollY]);
 
   return (
     <div
