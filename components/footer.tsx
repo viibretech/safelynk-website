@@ -66,7 +66,10 @@ const Footer = () => {
                 Our Escrow Promise
               </NavLink> */}
           </nav>
-          <div className="text-xs mt-7 font-inter-bold text-divider-600">
+          <div
+            id="parent-company"
+            className="text-xs mt-7 font-inter-bold text-divider-600"
+          >
             Safelynk is a product of{" "}
             <a
               href="https://viibretech.com"
@@ -76,11 +79,12 @@ const Footer = () => {
               Viibre Technologies Limited.
             </a>
             <div className="font-inter-regular">
-              Viibre helps businesses grow with smart, tailored software
-              solutions that streamline operations, enhance experiences, and
-              drive results. We don’t just build software — we design digital
-              solutions that strengthen every part of your business. Our focus
-              areas ensure you get measurable results where it matters most.
+              Viibre Technologies helps businesses grow with smart, tailored
+              software solutions that streamline operations, enhance
+              experiences, and drive results. We don’t just build software — we
+              design digital solutions that strengthen every part of your
+              business. Our focus areas ensure you get measurable results where
+              it matters most.
             </div>
           </div>
         </div>
