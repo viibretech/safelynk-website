@@ -1,6 +1,7 @@
 import { socials } from "@/utils/contents";
 import { NavLink } from "./header";
 import { Divider, Image } from "@heroui/react";
+import { RiFacebookCircleFill } from "@remixicon/react";
 
 const Footer = () => {
   return (
@@ -44,12 +45,16 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
-                      alt={item.name}
-                      src={item.image}
-                      width={20}
-                      radius="none"
-                    />
+                    {item.image && (
+                      <Image
+                        alt={item.name}
+                        src={item.image}
+                        width={20}
+                        radius="none"
+                      />
+                    )}
+
+                    {!item.image && <RiFacebookCircleFill />}
                   </a>
                 );
               })}

@@ -300,6 +300,7 @@ export default function Index() {
                   imagePath="svgs/apple.svg"
                   text1="Download on the"
                   text2="App Store"
+                  url="https://apps.apple.com/gh/app/safelynk/id6755051699"
                 />
                 <SocialButton
                   imagePath="svgs/google.svg"

@@ -7,17 +7,17 @@ const socials = [
   {
     name: "instagram",
     image: "svgs/instagram.svg",
-    url: "",
+    url: "https://www.instagram.com/safelynk.io/",
   },
   {
-    name: "medium",
-    image: "svgs/medium.svg",
-    url: "",
+    name: "facebook",
+    image: null,
+    url: "https://www.facebook.com/profile.php?id=61584526807407",
   },
   {
     name: "x",
     image: "svgs/x.svg",
-    url: "",
+    url: "https://x.com/safelynk_io",
   },
 ];
 
