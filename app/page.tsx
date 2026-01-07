@@ -306,6 +306,7 @@ export default function Index() {
                   imagePath="svgs/google.svg"
                   text1="GET IT ON"
                   text2="Google Pay"
+                  url="https://play.google.com/store/apps/details?id=com.safelynk.prod"
                 />
               </div>
             </div>
