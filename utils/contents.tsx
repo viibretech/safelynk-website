@@ -42,11 +42,11 @@ const faqs = [
     description:
       "Safelynk supports multiple payment options including mobile money, bank cards, and direct account transfers for flexibility and convenience.",
   },
-  {
-    title: "How much does Safelynk charge?",
-    description:
-      "Safelynk charges a 3% commission on every completed transaction. No hidden fees or subscription costs.",
-  },
+  // {
+  //   title: "How much does Safelynk charge?",
+  //   description:
+  //     "Safelynk charges a 3% commission on every completed transaction. No hidden fees or subscription costs.",
+  // },
   {
     title: "Is Safelynk safe?",
     description:
