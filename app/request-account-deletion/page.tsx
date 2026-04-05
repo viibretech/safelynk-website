@@ -18,11 +18,11 @@ const Page = () => {
           <h1 className="text-2xl transition-all md:text-4xl font-inter-display-bold text-center mb-6">
             {"We're sorry to see you leave"}
           </h1>
-          <h1 className="text-xs transition-all text-center">
+          <p className="text-xs transition-all text-center text-divider-600 max-w-lg">
             {
               "Please provide your details below to request account deletion. If there's anything we can do to improve your experience, let us know."
             }
-          </h1>
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto pb-20 space-y-8">

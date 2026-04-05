@@ -1,6 +1,25 @@
+import type { Metadata } from "next";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { getSiteUrl } from "@/lib/site";
 import { Chip } from "@heroui/react";
+
+const title = "Terms of Service";
+const description =
+  "Terms governing your use of the Safelynk website, app, and related services. Read the full agreement from Viibre Technology LTD (Safelynk).";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: `${getSiteUrl()}/terms-of-service`,
+  },
+  alternates: {
+    canonical: `${getSiteUrl()}/terms-of-service`,
+  },
+};
 
 const Page = () => {
   return (

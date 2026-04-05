@@ -18,10 +18,10 @@ const Page = () => {
           <h1 className="text-2xl transition-all md:text-4xl font-inter-display-bold text-center mb-6">
             Get in touch
           </h1>
-          <h1 className="text-xs transition-all text-center">
+          <p className="text-xs transition-all text-center text-divider-600 max-w-lg">
             Have questions or need a demo? Send us a message and we’ll reply
             promptly.
-          </h1>
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto pb-20 space-y-8">

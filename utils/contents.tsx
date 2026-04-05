@@ -55,7 +55,7 @@ const faqs = [
   {
     title: "Can Safelynk be integrated into my app or website?",
     description:
-      "Currently no but in the near future Safelynk will provision APIs that will developers to integrate escrow and payment protection features directly into their platforms.",
+      "Not yet. Safelynk does not offer public APIs today, but we plan to provide APIs so developers can integrate escrow and payment protection into their own apps and websites. Contact us if you are interested in early access.",
   },
   {
     title: "What happens if there’s a dispute?",
@@ -114,7 +114,7 @@ const cards = [
       </span>
     ),
     description:
-      "Integrate Safelynk’s escrow API to protect users, reduce disputes, and boost successful transactions. Ideal for e-commerce, gig platforms, delivery apps, rentals, and service marketplaces.",
+      "When Safelynk’s platform APIs launch, marketplaces will be able to embed escrow and payment protection to reduce disputes and grow trusted transactions across e-commerce, gig work, delivery, rentals, and services.",
     imagePath: "/images/marketplace.jpg",
   },
 ];

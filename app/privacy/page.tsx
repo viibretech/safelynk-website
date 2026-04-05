@@ -1,6 +1,25 @@
+import type { Metadata } from "next";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { getSiteUrl } from "@/lib/site";
 import { Chip } from "@heroui/react";
+
+const title = "Privacy Policy";
+const description =
+  "How Safelynk collects, uses, and protects your personal information when you use our website and app. Read our full privacy policy.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: `${getSiteUrl()}/privacy`,
+  },
+  alternates: {
+    canonical: `${getSiteUrl()}/privacy`,
+  },
+};
 
 const Page = () => {
   return (
